@@ -347,9 +347,6 @@
         entries.forEach((entry) => {
           const idx = state.sections.indexOf(entry.target);
           if (idx === -1) return;
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-          }
           if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
             state.current = idx;
             updateUi();
@@ -422,3 +419,4 @@
 
   document.addEventListener("DOMContentLoaded", init);
 })();
+                            
